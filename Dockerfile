@@ -25,10 +25,6 @@ ENV LC_ALL en_US.UTF-8
 ENV LC_CTYPE en_US.UTF-8
 ENV LC_MESSAGES en_US.UTF-8
 
-# set timezone to seoul.
-RUN echo "Asia/Seoul" > /etc/timezone
-RUN dpkg-reconfigure -f noninteractive tzdata
-
 RUN set -ex \
     && buildDeps=' \
         freetds-dev \
